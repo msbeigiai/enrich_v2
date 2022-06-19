@@ -1,7 +1,7 @@
-
+from src.enrichment.enrich_v2 import *
 
 
 def test_fetch_needed_columns():
-    # c = enrich_v2
-    msg = {"a": 1, "b": 2, "c": 3, "d": 4}
-    columns_needed = ["a", "b"]
+    nested_data = {"ITEMID": "itemid", "PRICE": "price", "a": 1, "b": 2, "c": 3, "d": 4}
+    cleaned_data = fetch_needed_columns(nested_data)
+    assert cleaned_data == {"ITEMID": "itemid", "PRICE": "price"}
