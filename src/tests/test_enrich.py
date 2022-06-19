@@ -1,4 +1,5 @@
-from enrich import enrich_v2
+
+
 
 def test_fetch_needed_columns():
     # c = enrich_v2
